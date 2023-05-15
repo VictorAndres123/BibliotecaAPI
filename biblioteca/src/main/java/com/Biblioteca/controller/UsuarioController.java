@@ -21,6 +21,7 @@ public class UsuarioController {
         if (usuarios.isEmpty()){
             return ResponseEntity.noContent().build();
         }
+
         return ResponseEntity.ok(usuarios);
     }
 
@@ -38,6 +39,8 @@ public class UsuarioController {
         Usuario userNew = usuarioService.save(user);
         return ResponseEntity.ok(userNew);
     }
+
+
 
 }
 

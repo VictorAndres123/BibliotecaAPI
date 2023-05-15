@@ -1,20 +1,96 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+
   <meta charset="UTF-8">
   <title>Inicio</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
   <style>
     body {
-      background-image: url('Libros.jpg');
+      background-image: url('');
       background-size: cover;
     }
     .navbar {
-      background-color: #666;
+      background-color: #000000;
       color: #fff;
     }
+    form {
+  display: flex;
+  align-items: center;
+}
+
+input[type="text"] {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 8px;
+  width: 300px;
+}
+
+button[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #3e8e41;
+}
+footer  {
+      background-color: #000000fe;
+      color: #fff;
+    }
+/* Estilo para la barra lateral */
+.sidenav {
+		  height: 100%;
+		  width: 0;
+		  position: fixed;
+		  z-index: 1;
+		  top: 0;
+		  left: 0;
+		  background-color: #111;
+		  overflow-x: hidden;
+		  transition: 0.5s;
+		  padding-top: 60px;
+		}
+
+		/* Estilo para los enlaces de la barra lateral */
+		.sidenav a {
+		  padding: 8px 8px 8px 32px;
+		  text-decoration: none;
+		  font-size: 25px;
+		  color: #818181;
+		  display: block;
+		  transition: 0.3s;
+		}
+
+		/* Estilo para los enlaces de la barra lateral al pasar el ratón por encima */
+		.sidenav a:hover {
+		  color: #f1f1f1;
+		}
+
+		/* Estilo para el botón de abrir la barra lateral */
+		.openbtn {
+		  font-size: 20px;
+		  cursor: pointer;
+		  background-color: #111;
+		  color: #fff;
+		  padding: 10px 15px;
+		  border: none;
+		  border-radius: 5px;
+		}
+
+		/* Estilo para el botón de abrir la barra lateral al pasar el ratón por encima */
+		.openbtn:hover {
+		  background-color: #444;
+		}
   </style>
 </head>
+
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-dark">
@@ -25,6 +101,40 @@
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+    <body>
+
+      <!-- Botón para abrir la barra lateral -->
+      <button class="openbtn" onclick="openNav()">☰ </button>
+    
+      <!-- Barra lateral -->
+      <div id="mySidenav" class="sidenav">
+    
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <h2>Libros disponibles</h2>
+
+
+        <a href="#">La historia secreta del mundo</a>
+        <a href="#">Cuentos Filosoficos</a>
+        <a href="#">¡Qué bello será vivir sin cultura!</a>
+        <a href="#">Aprendiendo de los Psicópatas</a>
+        <a href="#">El Narcisismo</a>
+      </div>
+      
+    
+      <!-- Script para abrir y cerrar la barra lateral -->
+      <script>
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "270px";
+        }
+    
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+        }
+      </script>
+    
+    </body>
+    
+    
     <div class="collapse navbar-collapse" id="navbarNav">
 
       <ul class="navbar-nav me-auto">
@@ -32,22 +142,23 @@
           <a class="nav-link" href="">Inicio <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="">Categorías</a>
+          <a class="nav-link" href="file:///C:/Users/USUARIO/Documents/BibliotecaCorhuila/BibliotecaAPI/biblioteca/src/main/resources/templates/Categoria.html">Categorías</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="">Contactanos</a>
+          <a class="nav-link" href="file:///C:/Users/USUARIO/Documents/BibliotecaCorhuila/BibliotecaAPI/biblioteca/src/main/resources/templates/Contactanos.html">Contactanos</a>
         </li>
       </ul>
       <ul class="navbar-nav ms-auto">
 
+        <form>
+          <input type="text" placeholder="Título, autor, editor o palabra clave...">
+          <button type="submit">Buscar</button>
+        </form>
         <li class="nav-item">
-          <a class="nav-link" href="#">Buscar</a>
+          <a class="nav-link" href="file:///C:/Users/USUARIO/Documents/BibliotecaCorhuila/BibliotecaAPI/biblioteca/src/main/resources/templates/Admin.html">Admin</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="">Admin</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="">Ingresar</a>
+          <a class="nav-link" href="file:///C:/Users/USUARIO/Documents/BibliotecaCorhuila/BibliotecaAPI/biblioteca/src/main/resources/templates/Login.html">Ingresar</a>
         </li>
       </ul>
     </div>
@@ -56,14 +167,16 @@
 
 
 <div class="container mt-5">
-  <h2 class="text-center mb-5">Libros Destacados</h2>
+  <h1 class="text-center mb-5">Libros Destacados</h1>
   <div class="row">
     <div class="col-md-4">
       <div class="card">
-        <img class="card-img-top" src="libro1.jpg" alt="Libro 1">
+        <img class="card-img-top" src="Cátedra Merli _ Manual para peripatéticos.png" alt="Libro 1">
         <div class="card-body">
-          <h5 class="card-title">Título del Libro 1</h5>
-          <p class="card-text">Autor del Libro 1</p>
+          <h5 class="card-title">¿Cómo llegaron los
+            ricos y poderosos a
+            estar donde están?</h5>
+          <p class="card-text">Autor del Libro: Nicolás Maquiavelo</p>
           <a href="#" class="btn btn-primary">Más información</a>
         </div>
       </div>
@@ -72,18 +185,19 @@
       <div class="card">
         <img class="card-img-top" src="libro2.jpg" alt="Libro 2">
         <div class="card-body">
-          <h5 class="card-title">Título del Libro 2</h5>
-          <p class="card-text">Autor del Libro 2</p>
+          <h5 class="card-title">Obras De Teatro Infantil 
+                                         Volumen 2 </h5>
+          <p class="card-text">Autor del Libro: Fabián Sevilla</p>
           <a href="#" class="btn btn-primary">Más información</a>
         </div>
       </div>
     </div>
     <div class="col-md-4">
       <div class="card">
-        <img class="card-img-top" src="libro3.jpg" alt="Libro 3">
+        <img class="card-img-top" src="▷ «LA PESTE»  - Camus - PlanetaLibro_net.jpg" alt="Libro 3">
         <div class="card-body">
-          <h5 class="card-title">Título del Libro 3</h5>
-          <p class="card-text"></p>        <p class="card-text">Autor del Libro 3</p>
+          <h5 class="card-title">La Peste</h5>
+          <p class="card-text"></p>        <p class="card-text">Autor del Libro: Albert Camus</p>
           <a href="#" class="btn btn-primary">Más información</a>
         </div>
       </div>
@@ -91,9 +205,68 @@
   </div>
 
 </div>
+
+<footer id="footer" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
+    <div class="footer-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-3 footer-links">
+                    <h4>Acerca de Librosmania.net</h4>
+                    <p>Librosmania es una biblioteca con más de 100 libros, 1.000 de dominio público para leer en tu teléfono, tablet o ebook reader.<br/>Descarga libros gratis y de forma legal</p>
+                </div>
+
+                <div class="col-lg-3 col-md-3 footer-links">
+                    <h4>Enlaces</h4>
+                    <ul>
+                        <li><i class="bx bx-chevron-right"></i> <a href="">Home</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="">Blog</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="">Audiolibros</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="">Descargar App</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-3 footer-links">
+                    <h4>Contacto</h4>
+                    <p>
+                        <strong>Email:</strong> librosmania@gmail.com<br>
+                    </p>
+                    <div class="social-links mt-3">
+                        <a href="" class="youtube"><i class="bx bxl-youtube"></i></a>
+                        <a href="" class="facebook"><i class="bx bxl-facebook"></i></a>
+                        <a href="" class="instagram"><i class="bx bxl-instagram"></i></a>
+                        <a href="" class="pinterest"><i class="bx bxl-pinterest"></i></a>
+                    </div>
+                    <div>
+                        <br/>
+                        <div id="eXTReMe"><a target="_blank" href="http://extremetracking.com/open?login=marpec">
+                            <img src="http://t1.extreme-dm.com/i.gif" style="border: 0;"
+                                 height="38" width="41" id="EXim" alt="eXTReMe Tracker" /></a>
+                            <script type="text/javascript"><!--
+                            var EXlogin='marpec' // Login
+var EXvsrv='s9' // VServer
+EXs=screen;EXw=EXs.width;navigator.appName!="Netscape"?
+EXb=EXs.colorDepth:EXb=EXs.pixelDepth;
+navigator.javaEnabled()==1?EXjv="y":EXjv="n";
+EXd=document;EXw?"":EXw="na";EXb?"":EXb="na";
+EXd.write("<img src=http://e0.extreme-dm.com",
+"/"+EXvsrv+".g?login="+EXlogin+"&amp;",
+"jv="+EXjv+"&amp;j=y&amp;srw="+EXw+"&amp;srb="+EXb+"&amp;",
+"l="+escape(EXd.referrer)+" height=1 width=1>");//-->
+</script><noscript><div id="neXTReMe"><img height="1" width="1" alt=""
+                                           src="http://e0.extreme-dm.com/s9.g?login=marpec&amp;j=n&amp;jv=n" />
+                            </div></noscript></div>          </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</footer>
   <!-- Scripts de Bootstrap -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
           <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.3/umd/popper.min.js"></script>
           <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+
+
 </body>
 </html>

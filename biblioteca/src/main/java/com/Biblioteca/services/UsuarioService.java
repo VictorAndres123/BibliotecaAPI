@@ -2,7 +2,7 @@ package com.Biblioteca.services;
 
 
 import com.Biblioteca.model.Usuario;
-import com.Biblioteca.repository.IUsuarioRepository;
+import com.Biblioteca.interfazService.IUsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

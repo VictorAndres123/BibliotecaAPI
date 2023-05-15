@@ -1,4 +1,4 @@
-package com.Biblioteca.repository;
+package com.Biblioteca.interfazService;
 
 
 import com.Biblioteca.model.Usuario;
@@ -7,6 +7,11 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface IUsuarioRepository extends JpaRepository<Usuario,Integer> {
+
+
+
+
+
 }
 
 

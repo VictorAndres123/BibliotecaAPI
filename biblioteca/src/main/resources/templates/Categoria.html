@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Categoría - Tecnología</title>
+  <title>Categoría </title>
   <!-- Agrega aquí tus enlaces de CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <style>
@@ -29,6 +29,94 @@
     .navbar-nav .nav-link:hover {
       color: #eee;
     }
+   button {
+   font-size: 5 rem;
+     font-weight: bold;
+  background-color: #555;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  margin: 8px;
+  cursor: pointer;
+        letter-spacing: 1px;
+
+}
+
+button:hover {
+  background-color: #444;
+}
+
+button:first-child {
+  margin-left: 0;
+}
+
+button:last-child {
+  margin-right: 0;
+}
+.book-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.book {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin: 20px;
+}
+
+.book-header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.book-header img {
+  max-width: 80px;
+  max-height: 120px;
+  margin-right: 10px;
+}
+
+.book-header h3 {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+.book-body {
+  padding: 10px;
+}
+
+.book-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-top: 1px solid #ddd;
+}
+
+.book-footer button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.book-footer button:hover {
+  background-color: #0056b3;
+}
+
+
+
   </style>
 </head>
 <body>
@@ -36,7 +124,7 @@
 <!-- Barra de navegación -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" href="file:///C:/Users/USUARIO/Documents/BibliotecaCorhuila/BibliotecaAPI/biblioteca/src/main/resources/templates/xd.html">
       <img src="logo.png" alt="Librosmania">
       Librosmania
     </a>
@@ -46,13 +134,13 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-          <a class="nav-link" href="http://localhost:63342/ProyectoBiblioteca/src/main/resources/templates/xd.html?_ijt=15s7qdbu2o75t580lkt96j7vm2&_ij_reload=RELOAD_ON_SAVE">Inicio</a>
+          <a class="nav-link" href="file:///C:/Users/USUARIO/Documents/BibliotecaCorhuila/BibliotecaAPI/biblioteca/src/main/resources/templates/xd.html">Inicio</a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" href="http://localhost:63342/ProyectoBiblioteca/src/main/resources/templates/Categoria.html?_ijt=numfod698s3od8vlghk0vc5l53&_ij_reload=RELOAD_ON_SAVE">Categorías<span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="file:///C:/Users/USUARIO/Documents/BibliotecaCorhuila/BibliotecaAPI/biblioteca/src/main/resources/templates/Categoria.html">Categorías<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="http://localhost:63342/ProyectoBiblioteca/src/main/resources/templates/Contactanos.html?_ijt=9cnhhr3uric814s0iit4lrk36j&_ij_reload=RELOAD_ON_SAVE">Contactanos</a>
+          <a class="nav-link" href="file:///C:/Users/USUARIO/Documents/BibliotecaCorhuila/BibliotecaAPI/biblioteca/src/main/resources/templates/Contactanos.html">Contactanos</a>
         </li>
       </ul>
       <ul class="navbar-nav ml-auto">
@@ -60,54 +148,137 @@
           <a class="nav-link" href="#">Buscar</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="http://localhost:63342/ProyectoBiblioteca/src/main/resources/templates/Admin.html?_ijt=9cnhhr3uric814s0iit4lrk36j&_ij_reload=RELOAD_ON_SAVE">Admin</a>
+          <a class="nav-link" href="file:///C:/Users/USUARIO/Documents/BibliotecaCorhuila/BibliotecaAPI/biblioteca/src/main/resources/templates/Admin.html">Admin</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="http://localhost:63342/ProyectoBiblioteca/src/main/resources/templates/Login.html?_ijt=numfod698s3od8vlghk0vc5l53&_ij_reload=RELOAD_ON_SAVE">Ingresar</a>
+          <a class="nav-link" href="file:///C:/Users/USUARIO/Documents/BibliotecaCorhuila/BibliotecaAPI/biblioteca/src/main/resources/templates/Login.html">Ingresar</a>
         </li>
       </ul>
     </div>
   </div>
 </nav>
-
-<div class="container my-5">
-  <h1 class="text-center mb-5">Tecnología</h1>
-  <div class="row">
-    <div class="col-md-4 mb-3">
-      <div class="card">
-        <img src="Libro1.jpg" class="card-img-top" alt="Libro 1">
-        <div class="card-body">
-          <h5 class="card-title">Libro 1</h5>
-          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec commodo, dolor vel viverra ornare, tortor libero porta tellus, eu bibendum orci sem a eros.</p>
-          <a href="#" class="btn btn-primary">Ver libro</a>
-        </div>
-      </div>
+<div>
+  <button onclick="filterBooks('todos')">Todos</button>
+  <button onclick="filterBooks('novelas')">Novelas</button>
+  <button onclick="filterBooks('poesia')">Poesía</button>
+  <button onclick="filterBooks('ensayos')">Ensayos</button>
+</div>
+<div class="book-container">
+  <div class="book">
+    <div class="book-header">
+      <img src="Libro 1.jpg">
+      <h3>La historia secreta del mundo</h3>
     </div>
-    <div class="col-md-4 mb-3">
-      <div class="card">
-        <img src="Libro3.jpg" class="card-img-top" alt="Libro 1">
-        <div class="card-body">
-          <h5 class="card-title">Libro 2</h5>
-          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec commodo, dolor vel viverra ornare, tortor libero porta tellus, eu bibendum orci sem a eros.</p>
-          <a href="#" class="btn btn-primary">Ver libro</a>
-        </div>
-      </div>
+    <div class="book-body">
+      <p>Autor del Libro: Jonathan Black</p>
     </div>
-    <div class="col-md-4 mb-3">
-      <div class="card">
-        <img src="Libro2.jpg" class="card-img-top" alt="Libro 1">
-        <div class="card-body">
-          <h5 class="card-title">Libro 3</h5>
-          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec commodo, dolor vel viverra ornare, tortor libero porta tellus, eu bibendum orci sem a eros.</p>
-          <a href="#" class="btn btn-primary">Ver libro</a>
-        </div>
-      </div>
+    <div class="book-footer">
+      <button>Leer</button>
+    </div>
+  </div>
+  <div class="book">
+    <div class="book-header">
+      <img src="Libro 2.jpg">
+      <h3>Cuentos Filosoficos</h3>
+    </div>
+    <div class="book-body">
+      <p>Autor del Libro: Martin Cohen</p>
+    </div>
+    <div class="book-footer">
+      <button>Leer</button>
+    </div>
+  </div>
+  <div class="book">
+    <div class="book-header">
+      <img src="Libro 3.jpg">
+      <h3>¡Qué bello será vivir sin cultura!</h3>
+    </div>
+    <div class="book-body">
+      <p>Autor del Libro: Cesár Antonio Molina</p>
+    </div>
+    <div class="book-footer">
+      <button>Leer</button>
+    </div>
+  </div>
+  <div class="book todos novelas">
+    <div class="book-header">
+      <img src="Libro 4.jpg">
+      <h3>Aprendiendo de los Psicópatas</h3>
+    </div>
+    <div class="book-body">
+      <p>Autor del Libro: César Landaeta H.</p>
+    </div>
+    <div class="book-footer">
+      <button>Leer</button>
+    </div>
+  </div>
+  <div class="book todos novelas">
+    <div class="book-header">
+      <img src="Libro 5.webp">
+      <h3>Psicología Oscura</h3>
+    </div>
+    <div class="book-body">
+      <p>Autor del Libro: Steven Turner</p>
+    </div>
+    <div class="book-footer">
+      <button>Leer</button>
+    </div>
+  </div>
+  <div class="book">
+    <div class="book-header">
+      <img src="Libro 6.jpg">
+      <h3>El Narcisismo</h3>
+    </div>
+    <div class="book todos novelas">
+      <p>Autor del Libro: Alexander Lowen</p>
+    </div>
+    <div class="book-footer">
+      <button>Leer</button>
+    </div>
+  </div>
+  <div class="book todos ensayos">
+    <div class="book-header">
+      <img src="Libro 7.jpg">
+      <h3>Historia Curiosa De La Medicina</h3>
+    </div>
+    <div class="book-body">
+      <p>Autor del Libro: Pedro Gargantilla</p>
+    </div>
+    <div class="book-footer">
+      <button>Leer</button>
+    </div>
+  </div>
+  <div class="book todos ensayos">
+    <div class="book-header">
+      <img src="Libro 8.jpg">
+      <h3>El Arte De Memorizar</h3>
+    </div>
+    <div class="book-body">
+      <p>Autor del Libro: Luis Sebastián</p>
+    </div>
+    <div class="book-footer">
+      <button>Leer</button>
     </div>
   </div>
 </div>
+
+<script>
+  function filterBooks(category) {
+  let books = document.querySelectorAll('.book');
+  books.forEach(book => {
+  if (book.classList.contains(category) || category === 'todos') {
+  book.style.display = 'flex';
+  } else {
+  book.style.display = 'none';
+  }
+  });
+  }
+  </script>
+
     <!-- Agrega aquí tus scripts de Bootstrap -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+
 </body>
 </html>

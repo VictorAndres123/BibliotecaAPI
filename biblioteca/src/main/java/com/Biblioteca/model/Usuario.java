@@ -11,9 +11,12 @@ import javax.persistence.*;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+
 @Table(name = "usuario")
 
 public class Usuario {
+
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -21,6 +24,14 @@ public class Usuario {
     private String apellido;
     private String email;
     private String contrasena;
+    private String genero;
+    private String fechadenacimiento;
+    private String estado;
+    private String nacionalidad;
+    private String telefono;
+    private String nombreusuario;
+
+
 
 
 }
