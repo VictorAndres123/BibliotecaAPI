@@ -27,6 +27,7 @@ public class Editorial {
     private String correo;
     private boolean estado;
 
+    @Transient
     @OneToMany(mappedBy="editorial")
     private Set<Libro> libros;
 }

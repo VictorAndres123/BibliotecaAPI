@@ -29,22 +29,26 @@ public class Libro {
 
 
     //FK
+    @Transient
     @ManyToOne()
     @JoinColumn(foreignKey = @ForeignKey(name = "fk_libro_categoria"), name="categoriaId",
             nullable = false)
     private Categoria categoria;
 
+    @Transient
     @ManyToOne()
     @JoinColumn(foreignKey = @ForeignKey(name = "fk_libro_autor"), name="autorId",
             nullable = false)
     private Autor autor;
 
+    @Transient
     @ManyToOne()
     @JoinColumn(foreignKey = @ForeignKey(name = "fk_libro_editorial"), name="editorialId",
             nullable = false)
     private Editorial editorial;
 
 
+    @Transient
     @OneToMany(mappedBy="libro")
     private Set<Prestamo> prestamos;
 

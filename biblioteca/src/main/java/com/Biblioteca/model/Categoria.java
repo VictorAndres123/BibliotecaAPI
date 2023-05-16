@@ -26,6 +26,7 @@ public class Categoria {
     private String descripcion;
     private boolean estado;
 
+    @Transient
     @OneToMany(mappedBy="categoria")
     private Set<Libro> libros;
 

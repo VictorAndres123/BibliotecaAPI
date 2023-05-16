@@ -2,30 +2,32 @@ package com.Biblioteca.services;
 
 
 import com.Biblioteca.model.Autor;
-import com.Biblioteca.model.Usuario;
-import com.Biblioteca.repository.IUsuarioRepository;
+import com.Biblioteca.repository.IAutorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Service
 public class AutorService {
-    /*@Autowired
-    IAutorRepository usuarioRepository;
+
+    @Autowired
+    IAutorRepository autorRepository;
 
 
-    public Usuario save (Usuario user) {
-        Usuario userNew = usuarioRepository.save(user);
+    public Autor save(Autor autor) {
+        Autor userNew = autorRepository.save(autor);
         return userNew;
     }
-    public List<Usuario> getAll() {
-        return  usuarioRepository.findAll();
+
+    public List<Autor> getAll() {
+        List<Autor> listAutores = autorRepository.findAll();
+        return listAutores;
     }
 
-    public Usuario getUserById(int id) {
-        return  usuarioRepository.findById(id).orElse(null);
-    }*/
+    public Autor getAutorById(int id) {
+        Autor autor = autorRepository.findById(id).orElse(null);
+        return autor;
+    }
 }
 

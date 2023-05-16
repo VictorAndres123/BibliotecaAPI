@@ -19,7 +19,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="file:///C:/Users/USUARIO/Documents/BibliotecaCorhuila/BibliotecaAPI/biblioteca/src/main/resources/templates/xd.html">
+    <a class="navbar-brand" href="http://localhost:63342/biblioteca/templates/xd.html?_ijt=7g06uju01ncr537itei8lqk0p9&_ij_reload=RELOAD_ON_SAVE">
       <img src="logo.png" alt="Librosmania" width="80" height="auto">
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,23 +29,23 @@
 
       <ul class="navbar-nav me-auto">
         <li class="nav-item">
-          <a class="nav-link" href="file:///C:/Users/USUARIO/Documents/BibliotecaCorhuila/BibliotecaAPI/biblioteca/src/main/resources/templates/xd.html">Inicio</a>
+          <a class="nav-link" href="http://localhost:63342/biblioteca/templates/xd.html?_ijt=7g06uju01ncr537itei8lqk0p9&_ij_reload=RELOAD_ON_SAVE">Inicio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="file:///C:/Users/USUARIO/Documents/BibliotecaCorhuila/BibliotecaAPI/biblioteca/src/main/resources/templates/Categoria.html">Categorías</a>
+          <a class="nav-link" href="http://localhost:63342/biblioteca/templates/Categoria.html?_ijt=7g06uju01ncr537itei8lqk0p9&_ij_reload=RELOAD_ON_SAVE">Categorías</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="file:///C:/Users/USUARIO/Documents/BibliotecaCorhuila/BibliotecaAPI/biblioteca/src/main/resources/templates/Contactanos.html">Contactanos</a>
+          <a class="nav-link" href="http://localhost:63342/biblioteca/templates/Contactanos.html?_ijt=749h54ne5q0cir7mtjmgjsjpei&_ij_reload=RELOAD_ON_SAVE">Contactanos</a>
         </li>
       </ul>
       <ul class="navbar-nav ms-auto">
 
       
         <li class="nav-item">
-          <a class="nav-link" href="file:///C:/Users/USUARIO/Documents/BibliotecaCorhuila/BibliotecaAPI/biblioteca/src/main/resources/templates/Admin.html">Admin</a>
+          <a class="nav-link" href="http://localhost:63342/biblioteca/templates/Admin.html?_ijt=749h54ne5q0cir7mtjmgjsjpei&_ij_reload=RELOAD_ON_SAVE">Admin</a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" href="file:///C:/Users/USUARIO/Documents/BibliotecaCorhuila/BibliotecaAPI/biblioteca/src/main/resources/templates/Login.html">Ingresar<span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="http://localhost:63342/biblioteca/templates/Login.html?_ijt=9fq2ovg3dukpao0hpda2thh6ss&_ij_reload=RELOAD_ON_SAVE">Ingresar<span class="sr-only">(current)</span></a>
         </li>
       </ul>
     </div>
@@ -55,6 +55,13 @@
 <div class="container mt-5">
   <h2 class="text-center mb-5">Registro del Usuario</h2>
   <form>
+    <div class="row mb-3">
+      <label for="inputNombre" class="col-sm-2 col-form-label">Identificación: </label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="inputId">
+      </div>
+    </div>
+
     <div class="row mb-3">
       <label for="inputNombre" class="col-sm-2 col-form-label">Nombre: </label>
       <div class="col-sm-10">
@@ -68,9 +75,27 @@
       </div>
     </div>
     <div class="row mb-3">
+      <label for="inputNombre" class="col-sm-2 col-form-label">Genero: </label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="inputGenero">
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label for="inputNombre" class="col-sm-2 col-form-label">Fecha de Nacimiento: </label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="inputfechaNaciomiendo">
+      </div>
+    </div>
+    <div class="row mb-3">
       <label for="inputEmail" class="col-sm-2 col-form-label">Email: </label>
       <div class="col-sm-10">
         <input type="email" class="form-control" id="inputEmail">
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label for="inputNombre" class="col-sm-2 col-form-label">Telefonó: </label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="inputTelefono">
       </div>
     </div>
     <div class="row mb-3">
@@ -79,10 +104,13 @@
         <input type="password" class="form-control" id="inputPassword">
       </div>
     </div>
+
     <div class="row mb-3">
       <div class="col-sm-10 offset-sm-2">
         <button type="submit" class="btn btn-primary">Registrarse </button>
       </div>
     </div>
+
+
   </form>
 </div>

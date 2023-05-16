@@ -1,59 +1,42 @@
 package com.Biblioteca.controller;
 
 
-import org.springframework.web.bind.annotation.RestController;
+import com.Biblioteca.model.Autor;
+import com.Biblioteca.services.AutorService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
+@RequestMapping("/autor")
 public class AutorController {
-    /*private List<Autor> autores = new ArrayList<>();
+    @Autowired
+    AutorService autorService;
 
-    @PostMapping("/autores")
-    public void agregarAutor(@RequestBody Autor autor) {
-        autores.add(autor);
-        System.out.println("El autor " + autor.getNombre() + " ha sido agregado a la lista.");
-    }
-
-    @GetMapping("/autores")
-    public List<Autor> listarAutores() {
+    @GetMapping
+    public ResponseEntity<List<Autor>> getAll() {
+        List<Autor> autores = autorService.getAll();
         if (autores.isEmpty()) {
-            System.out.println("No hay autores en la lista.");
+            return ResponseEntity.noContent().build();
         }
-        return autores;
+        return ResponseEntity.ok(autores);
     }
 
-    @GetMapping("/autores/{nombre}")
-    public Autor buscarAutor(@PathVariable String nombre) {
-        for (Autor autor : autores) {
-            if (autor.getNombre().equalsIgnoreCase(nombre)) {
-                return autor;
-            }
+    @GetMapping("/{id}")
+    public ResponseEntity<Autor> getById(@PathVariable("id") int id) {
+        Autor autor = autorService.getAutorById(id);
+        if (autor == null) {
+            return ResponseEntity.notFound().build();
         }
-        return null;
+        return ResponseEntity.ok(autor);
     }
 
-    @PutMapping("/autores/{nombre}")
-    public void actualizarAutor(@PathVariable String nombre, @RequestBody Autor nuevoAutor) {
-        for (Autor autor : autores) {
-            if (autor.getNombre().equalsIgnoreCase(nombre)) {
-                autor.setNombre(nuevoAutor.getNombre());
-                autor.setNacionalidad(nuevoAutor.getNacionalidad());
-                System.out.println("El autor " + autor.getNombre() + " ha sido actualizado.");
-                return;
-            }
-        }
-        System.out.println("No se encontró el autor en la lista.");
+    @PostMapping
+    public ResponseEntity<Autor> save(@RequestBody Autor autor) {
+        Autor autorNew = autorService.save(autor);
+        return ResponseEntity.ok(autorNew);
     }
-
-    @DeleteMapping("/autores/{nombre}")
-    public void eliminarAutor(@PathVariable String nombre) {
-        for (Autor autor : autores) {
-            if (autor.getNombre().equalsIgnoreCase(nombre)) {
-                autores.remove(autor);
-                System.out.println("El autor " + autor.getNombre() + " ha sido eliminado de la lista.");
-                return;
-            }
-        }
-        System.out.println("No se encontró el autor en la lista.");
-    }*/
 
 }

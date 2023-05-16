@@ -27,6 +27,7 @@ public class Autor {
     private String nacionalidad;
     private boolean estado;
 
+    @Transient
     @OneToMany(mappedBy="autor")
     private Set<Libro> libros;
 

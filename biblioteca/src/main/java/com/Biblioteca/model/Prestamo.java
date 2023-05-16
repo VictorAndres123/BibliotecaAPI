@@ -27,12 +27,13 @@ public class Prestamo {
     private Date fechaEntrega;
     private boolean estado;
 
-    @JsonIgnore
+    @Transient
     @ManyToOne()
     @JoinColumn(foreignKey = @ForeignKey(name = "fk_prestamo_usuario"), name="usuarioId",
             nullable = false)
     private Usuario usuario;
 
+    @Transient
     @ManyToOne()
     @JoinColumn(foreignKey = @ForeignKey(name = "fk_prestamo_libro"), name="libroId",
             nullable = false)

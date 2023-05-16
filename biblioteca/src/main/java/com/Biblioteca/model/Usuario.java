@@ -1,6 +1,5 @@
 package com.Biblioteca.model;
 
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -32,6 +31,7 @@ public class Usuario {
     private String telefono;
     private boolean estado;
 
+    @Transient
     @OneToMany(mappedBy="usuario")
     private Set<Prestamo> prestamos;
 
