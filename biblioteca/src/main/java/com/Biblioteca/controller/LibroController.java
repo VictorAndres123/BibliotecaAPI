@@ -1,22 +1,24 @@
 package com.Biblioteca.controller;
 
-import com.Biblioteca.model.Libros;
+import com.Biblioteca.model.Libro;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@RestController
+@RequestMapping("/libro")
 public class LibroController {
-    private List<Libros> libros = new ArrayList<>();
+    /*private List<Libro> libros = new ArrayList<>();
 
     @PostMapping("/libros")
-    public void agregarLibro(@RequestBody Libros libro) {
+    public void agregarLibro(@RequestBody Libro libro) {
         libros.add(libro);
         System.out.println("El libro " + libro.getTitulo() + " de " + libro.getAutor() + " ha sido agregado a la biblioteca.");
     }
 
     @GetMapping("/libros")
-    public List<Libros> listarLibros() {
+    public List<Libro> listarLibros() {
         if (libros.isEmpty()) {
             System.out.println("La biblioteca está vacía.");
         }
@@ -24,8 +26,8 @@ public class LibroController {
     }
 
     @GetMapping("/libros/{titulo}")
-    public Libros buscarLibro(@PathVariable String titulo) {
-        for (Libros libro : libros) {
+    public Libro buscarLibro(@PathVariable String titulo) {
+        for (Libro libro : libros) {
             if (libro.getTitulo().equalsIgnoreCase(titulo)) {
                 return libro;
             }
@@ -35,7 +37,7 @@ public class LibroController {
 
     @PutMapping("/libros/{titulo}")
     public void marcarComoLeido(@PathVariable String titulo) {
-        for (Libros libro : libros) {
+        for (Libro libro : libros) {
             if (libro.getTitulo().equalsIgnoreCase(titulo)) {
                 libro.setLeido(true);
                 System.out.println("El libro " + libro.getTitulo() + " ha sido marcado como leído.");
@@ -47,7 +49,7 @@ public class LibroController {
 
     @DeleteMapping("/libros/{titulo}")
     public void eliminarLibro(@PathVariable String titulo) {
-        for (Libros libro : libros) {
+        for (Libro libro : libros) {
             if (libro.getTitulo().equalsIgnoreCase(titulo)) {
                 libros.remove(libros);
                 System.out.println("El libro " + libro.getTitulo() + " ha sido eliminado de la biblioteca.");
@@ -55,7 +57,7 @@ public class LibroController {
             }
         }
         System.out.println("No se encontró el libro en la biblioteca.");
-    }
+    }*/
 
 }
 

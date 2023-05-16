@@ -7,9 +7,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class EditorialController {
-    @RestController
-    public class ControladorEditoriales {
 
+
+/*
         private List<Editorial> editoriales = new ArrayList<>();
 
         @PostMapping("/editoriales")
@@ -59,7 +59,7 @@ public class EditorialController {
                 }
             }
             System.out.println("No se encontró la editorial en la lista.");
-        }
+        }*/
 
-    }
+
 }

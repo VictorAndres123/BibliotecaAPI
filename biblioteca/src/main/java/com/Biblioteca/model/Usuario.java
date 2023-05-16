@@ -1,10 +1,12 @@
 package com.Biblioteca.model;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.*;
 
 
 @Entity
@@ -13,26 +15,25 @@ import javax.persistence.*;
 @AllArgsConstructor
 
 @Table(name = "usuario")
-
 public class Usuario {
-
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="usuarioId", nullable = false, insertable=false)
     private int id;
     private String nombre;
     private String apellido;
-    private String email;
+    private String nombreUsuario;
+    private String correo;
     private String contrasena;
     private String genero;
-    private String fechadenacimiento;
-    private String estado;
+    private Date fechaNacimiento;
     private String nacionalidad;
     private String telefono;
-    private String nombreusuario;
+    private boolean estado;
 
-
-
+    @OneToMany(mappedBy="usuario")
+    private Set<Prestamo> prestamos;
 
 }
 
